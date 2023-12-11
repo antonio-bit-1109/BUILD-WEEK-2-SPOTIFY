@@ -11111,6 +11111,7 @@ i, span {
 }
 
 .cont-1 {
+  height: 60vh;
   overflow-x: hidden;
   text-overflow: ellipsis;
 }
