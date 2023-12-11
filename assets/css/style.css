@@ -11015,4 +11015,7 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.h-playBar {
+  height: 10px;
 }/*# sourceMappingURL=style.css.map */
