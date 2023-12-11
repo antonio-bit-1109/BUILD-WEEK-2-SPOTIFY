@@ -10,44 +10,87 @@
   <body>
     <section class="container-fluid m-auto">
       <div class="row">
-        <button
-          class="btn button border-0 bg-black px-0 fs-3 ms-2"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseWidthExample"
-          aria-expanded="false"
-          aria-controls="collapseWidthExample"
+        <div class="col-auto d-inline-block d-md-none">
+          <a
+            class="btn btn-light bg-transparent border-0"
+            data-bs-toggle="offcanvas"
+            href="#offcanvasExample"
+            role="button"
+            aria-controls="offcanvasExample"
+            ><i class="bi bi-three-dots-vertical"></i>
+          </a>
+        </div>
+
+        <!-- --------------------OFF CANVAS ---------------------------->
+
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
         >
-          <i class="bi bi-three-dots"></i>
-        </button>
-        <div class="col-3 bg-black collapse collapse-horizontal" id="collapseWidthExample">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
+              lists, etc.
+            </div>
+            <div class="dropdown mt-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------- -->
+
+        <div class="col-3 bg-black d-none d-md-inline-block" id="collapseWidthExample">
           <div class="container">
+            <button
+              class="btn button border-0 bg-black px-0 fs-3"
+              type="button"
+              data-bs-toggle="navTry"
+              data-bs-target="#collapseWidthExample"
+            >
+              <i class="bi bi-three-dots"></i>
+            </button>
             <nav class="border-1 border-bottom border-secondary">
               <ul class="menu-1 ps-0">
                 <li class="mb-2">
-                  <i class="bi bi-house fs-3 me-3 text-white"></i><a href=""><span class="">Home</span></a>
+                  <i class="bi bi-house fs-3 me-3 text-white"></i
+                  ><a href=""><span class="d-none d-md-inline-block">Home</span></a>
                 </li>
                 <li class="mb-2">
-                  <i class="bi bi-search fs-3 me-3 text-white"></i><a href=""><span class="">Cerca</span></a>
+                  <i class="bi bi-search fs-3 me-3 text-white"></i
+                  ><a href=""><span class="d-none d-md-inline-block">Cerca</span></a>
                 </li>
                 <li class="mb-2">
                   <i class="bi bi-collection-play fs-3 me-3 text-white"></i
-                  ><a href=""><span class=""> La tua Libreria</span></a>
+                  ><a href=""><span class="d-none d-md-inline-block"> La tua Libreria</span></a>
                 </li>
               </ul>
 
               <ul class="menu-2 mt-4 ps-0">
                 <li class="mb-3">
                   <i class="bi bi-plus-lg me-3 text-black plus"></i
-                  ><a class="mb-1" href=""><span class="">Crea playlist</span></a>
+                  ><a class="mb-1" href=""><span class="d-none d-md-inline-block">Crea playlist</span></a>
                 </li>
                 <li class="mb-3">
                   <i class="bi bi-heart-fill me-3 text-white heart"></i
-                  ><a class="mb-1" href=""><span class="">Brani che ti piacciono</span></a>
+                  ><a class="mb-1" href=""><span class="d-none d-md-inline-block">Brani che ti piacciono</span></a>
                 </li>
                 <li>
                   <i class="bi bi-bookmark-fill me-3 text-success label"></i
-                  ><a class="mb-1" href=""><span class="">I tuoi episodi</span></a>
+                  ><a class="mb-1" href=""><span class="d-none d-md-inline-block">I tuoi episodi</span></a>
                 </li>
               </ul>
             </nav>
@@ -55,7 +98,7 @@
 
           <div class="cont-1 mt-3">
             <!-- <div class="playlists text-white ps-3 fs-7"> -->
-            <ul class="playlists text-white ps-3 fs-7">
+            <ul class="playlists d-none d-md-inline-block text-white ps-3 fs-7">
               <li class="mb-3"><a>early stage emily syndrome (sett-ott 2022)</a></li>
               <li class="mb-3"><a>Young TheBe</a></li>
               <li class="mb-3"><a>" ... " cit. Kimiko (lug-ago 2022)</a></li>
@@ -169,7 +212,7 @@
     </section>
 
     <!-- FOOTER -->
-    <div class="bg-dark text-light d-flex align-items-center justify-content-between position-sticky bottom-0">
+    <div class="bg-dark text-light d-flex align-items-center justify-content-between">
       <section class="container-fluid mx-0">
         <footer class="row">
           <div class="col">
