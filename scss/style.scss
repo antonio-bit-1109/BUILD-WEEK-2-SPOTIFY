@@ -48,7 +48,7 @@ i, span {
 }
 
 .cont-1{
-    height: 60vh;
+    // height: 60vh;
     overflow-x: hidden;
     text-overflow: ellipsis;
 }
@@ -91,3 +91,75 @@ i, span {
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+
+
+
+  .gradient-spotify {
+    background: rgb(2, 0, 36);
+    background: -moz-linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(237, 57, 212, 1) 0%,
+        rgba(13, 110, 253, 1) 0%,
+        rgba(111, 106, 106, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(237, 57, 212, 1) 0%,
+        rgba(13, 110, 253, 1) 0%,
+        rgba(111, 106, 106, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(237, 57, 212, 1) 0%,
+        rgba(13, 110, 253, 1) 0%,
+        rgba(111, 106, 106, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#000000",GradientType=1);
+}
+
+.w-60 {
+    width: 60% !important;
+}
+
+.start-60 {
+    left: 60% !important;
+}
+
+.bg-button {
+    background-color: #1e1e1e;
+}
+
+.mb-6 {
+    margin-bottom: 4rem !important;
+}
+
+.secondary-light {
+    background-color: rgb(201, 191, 191);
+}
+
+body {
+    #sezioneAnto {
+        .col-7 {
+            #container-centale-canzoni {
+                #contenitoreFluido {
+                    @media screen and (min-width: 1px) {
+                        width: 100% !important;
+                    }
+                    @media screen and (min-width: 992px) {
+                        width: 60% !important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -11111,7 +11111,6 @@ i, span {
 }
 
 .cont-1 {
-  height: 60vh;
   overflow-x: hidden;
   text-overflow: ellipsis;
 }
@@ -11146,4 +11145,41 @@ i, span {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.gradient-spotify {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(0, 0, 0) 0%, rgb(237, 57, 212) 0%, rgb(13, 110, 253) 0%, rgb(111, 106, 106) 0%, rgb(0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#000000",GradientType=1);
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.start-60 {
+  left: 60% !important;
+}
+
+.bg-button {
+  background-color: #1e1e1e;
+}
+
+.mb-6 {
+  margin-bottom: 4rem !important;
+}
+
+.secondary-light {
+  background-color: rgb(201, 191, 191);
+}
+
+@media screen and (min-width: 1px) {
+  body #sezioneAnto .col-7 #container-centale-canzoni #contenitoreFluido {
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  body #sezioneAnto .col-7 #container-centale-canzoni #contenitoreFluido {
+    width: 60% !important;
+  }
 }/*# sourceMappingURL=style.css.map */
