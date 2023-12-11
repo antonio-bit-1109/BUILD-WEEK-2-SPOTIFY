@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <style>
+        .Content-area {
+
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 37%, rgba(191, 168, 2, 1) 63%, rgba(231, 204, 3, 1) 77%, rgba(255, 225, 3, 1) 94%);
+            background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 37%, rgba(191, 168, 2, 1) 63%, rgba(231, 204, 3, 1) 77%, rgba(255, 225, 3, 1) 94%);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 37%, rgba(191, 168, 2, 1) 63%, rgba(231, 204, 3, 1) 77%, rgba(255, 225, 3, 1) 94%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#ffe103", GradientType=1);
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid">
+
+        <div class="row flex-nowrap">
+
+            <!-- Section left-->
+
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+
+                    </ul>
+                    <hr>
+
+                </div>
+            </div>
+
+            <!--INIZIO Content area...-->
+
+            <header class=" Content-area col">
+                <div class="m-3">
+                    <div class="row">
+
+                        <!--INIZIO Area Login...-->
+
+                        <div class="d-flex justify-content-between ">
+
+                            <div>
+                                <button type="button" class="btn btn-sm bg-dark opacity-75 rounded-circle"><a href=""><i
+                                            class="bi bi-chevron-left text-white"></i></a></button>
+                                <button type="button" class="btn btn-sm bg-dark opacity-75 rounded-circle"><a href=""><i
+                                            class="bi bi-chevron-right text-white"></i></a></button>
+                            </div>
+
+
+                            <div class="dropdown">
+
+                                <button type="button"
+                                    class="btn rounded-pill dropdown-toggle bg-dark opacity-75 text-white"
+                                    data-toggle="dropdown" id="dropdownMenuButton">
+                                    <img src="http://placekitten.com/33/33" class="figure-img img-fluid rounded-circle "
+                                        alt="A generic square placeholder image."> <span>Nome utente</span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!------------------------>
+
+                        <!---INIZIO Descrizione ALBUM---->
+
+                        <!-------Foto Album------->
+                        <div class="col-lg-3 col-md-4 mt-3">
+                            <img src="http://placekitten.com/222/222" class="figure-img img-fluid  "
+                                alt="A generic square placeholder image.">
+                        </div>
+                        <!-----Dettagli album----->
+                        <div class=" col-lg-9 col-md-8  d-flex align-items-end">
+                            <div>
+                                <p class="text-white"><small class="text-body-secondary">ALBUM</small></p>
+                                <h5 class="nome-album display-5 fw-bold text-white">NOME ALBUM</h5>
+                                <p class="text-white">
+                                    <span>
+                                        <img src="http://placekitten.com/22/22" class="rounded-circle"
+                                            alt="A generic square placeholder image.">
+                                    </span>
+                                    <span class="fw-bold">nome band</span> - anno - <span>n</span> brani, <span
+                                        class="fw-light">tot tempo</span>
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!------INIZIO Lista CANZONI------>
+
+                <div class="container-fluid bg-dark bg-opacity-25">
+
+                    <div>
+
+                        <!-------Sezione pulsanti------->
+
+                        <div class="d-flex justify-content-between py-3 ">
+
+                            <div>
+                                <button type="button" class="btn btn-md bg-success rounded-circle">
+                                    <a href="#">
+                                        <i class="bi bi-play-fill h1 text-black"></i>
+                                    </a>
+                                </button>
+
+                                <button type="button" class="btn">
+                                    <a href="#">
+                                        <i class="bi bi-suit-heart h2 text-white text-opacity-50"></i>
+                                    </a>
+                                </button>
+                                <button type="button" class="btn">
+                                    <a href="#">
+                                        <i class="bi bi-arrow-down-circle h2 text-white  text-opacity-50"></i>
+                                    </a>
+                                </button>
+
+                                <!-- tre dot dropdo-->
+
+                                <button type="button" class="btn bg-transparent text-white text-opacity-50"
+                                    data-toggle="dropdown" id="dropdownMenuButton">
+                                    <i class="bi bi-three-dots h2"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <!-- sezione definizioni-->
+
+                        <div class="container-fluid bg-dark bg-opacity-25">
+
+                            <div class="row">
+
+
+                                <div class="d-flex justify-content-between py-3 ">
+
+                                    <div class=" col-6" >
+
+                                        <ul class="list-group d.flex ">
+
+                                            <li class="text-white bg-transparent outline-none  list-group-item">
+                                                <div class="d-flex">
+                                                    <div class="ml-2 text-secondary">
+                                                        <h3 class="text-tertiary h6"><i class="bi bi-hash"></i><span>TITOLO</span></h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-3">
+                                        <ul class="list-group ">
+
+                                            <li class="text-white bg-transparent outline-none  list-group-item">
+                                                <div class="d-flex">
+                                                    <div class=" text-secondary">
+                                                    <h3 class="text-tertiary h6">RIPRODUZIONI</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="col-3">
+                                        <ul class="list-group ">
+
+                                            <li class="text-white bg-transparent outline-none  list-group-item">
+                                                <div class="d-flex">
+                                                
+                                                    <div class="text-secondary">
+                                                        <h3 class="text-tertiary h6"><i class="bi bi-clock"></i></h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <!-----sezione lista---->
+
+                            </div>
+                        </div>
+
+                        <!-----sezione lista---->
+
+                        <div class="container-fluid bg-dark bg-opacity-25">
+
+                            <div class="row">
+
+
+                                <div class="d-flex justify-content-between py-3 ">
+
+                                    <div class=" col-6" >
+
+                                        <ul class="list-group d.flex ">
+
+                                            <li class="text-white bg-transparent outline-none  list-group-item">
+                                                <div class="d-flex">
+                                                    <div class="p-2 m-l-auto h6"><p class="text-right">1</p></div>
+                                                    <div class="ml-2 text-secondary">
+                                                        <h2 class="text-muted h6">Titolo</h2>
+                                                        <h3 class="text-tertiary h6">Sottotitolo</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-3">
+                                        <ul class="list-group ">
+
+                                            <li class="text-white bg-transparent outline-none  list-group-item">
+                                                <div class="d-flex">
+                                                    <div class="p-2 m-l-auto h6"><p class="text-right">1</p></div>
+                                                    <div class="ml-2 text-secondary">
+                                                        <h2 class="text-muted h6">Titolo</h2>
+                                                        <h3 class="text-tertiary h6">Sottotitolo</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="col-3">
+                                        <ul class="list-group ">
+
+                                            <li class="text-white bg-transparent outline-none  list-group-item">
+                                                <div class="d-flex">
+                                                    <div class="p-2 m-l-auto h6"><p class="text-right">1</p></div>
+                                                    <div class="ml-2 text-secondary">
+                                                        <h2 class="text-muted h6">Titolo</h2>
+                                                        <h3 class="text-tertiary h6">Sottotitolo</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <!-----sezione lista---->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </header>
+
+            <!----------------------------------------------->
+
+            <!-- Section Right -->
+            <div class="col-auto col-md-2 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+
+                    </ul>
+                    <hr>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!---->
+    <script src="./assets/js/homepage.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
