@@ -10,9 +10,9 @@
   <body>
     <section class="container-fluid m-auto">
       <div class="row">
-        <div class="col-auto d-inline-block d-md-none">
+        <div class="col-auto d-inline-block d-md-none bg-black">
           <a
-            class="btn btn-light bg-transparent border-0"
+            class="btn btn-dark bg-transparent border-0"
             data-bs-toggle="offcanvas"
             href="#offcanvasExample"
             role="button"
@@ -24,17 +24,76 @@
         <!-- --------------------OFF CANVAS ---------------------------->
 
         <div
-          class="offcanvas offcanvas-start"
+          class="offcanvas offcanvas-start bg-black text-bg-danger d-md-none"
           tabindex="-1"
           id="offcanvasExample"
           aria-labelledby="offcanvasExampleLabel"
         >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <div class="offcanvas-header justify-content-end">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+              <i class="bi bi-x-lg btn btn-dark"></i>
+            </button>
           </div>
+
           <div class="offcanvas-body">
-            <div>
+            <div class="container">
+              <nav class="border-1 border-bottom border-secondary">
+                <ul class="menu-1 ps-0">
+                  <li class="mb-2">
+                    <i class="bi bi-house fs-3 me-3 text-white"></i><a href=""><span class="">Home</span></a>
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-search fs-3 me-3 text-white"></i><a href=""><span class="">Cerca</span></a>
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-collection-play fs-3 me-3 text-white"></i
+                    ><a href=""><span class=""> La tua Libreria</span></a>
+                  </li>
+                </ul>
+
+                <ul class="menu-2 mt-4 ps-0">
+                  <li class="mb-3">
+                    <i class="bi bi-plus-lg me-3 text-black plus"></i
+                    ><a class="mb-1" href=""><span class="">Crea playlist</span></a>
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-heart-fill me-3 text-white heart"></i
+                    ><a class="mb-1" href=""><span class="">Brani che ti piacciono</span></a>
+                  </li>
+                  <li>
+                    <i class="bi bi-bookmark-fill me-3 text-success label"></i
+                    ><a class="mb-1" href=""><span class="">I tuoi episodi</span></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="cont-1 mt-3">
+              <!-- <div class="playlists text-white ps-3 fs-7"> -->
+              <ul class="playlists d--md-none text-white ps-3 fs-5">
+                <li class="mb-3"><a>early stage emily syndrome (sett-ott 2022)</a></li>
+                <li class="mb-3"><a>Young TheBe</a></li>
+                <li class="mb-3"><a>" ... " cit. Kimiko (lug-ago 2022)</a></li>
+                <li class="mb-3"><a>saggio vibes 🦄</a></li>
+                <li class="mb-3"><a>main character energy (mag-giu 2022)</a></li>
+                <li class="mb-3"><a>that fucking mood✏️</a></li>
+                <li class="mb-3"><a>VEE, CARLOTTA E GIACOMO VANNO A BOSIO</a></li>
+                <li class="mb-3"><a>An Emily Winchester kind of mood 🐸</a></li>
+                <li class="mb-3"><a>landing page (mar-apr 2022)</a></li>
+                <li class="mb-3"><a>2021 lol</a></li>
+                <li class="mb-3"><a>cosa cazzo vuol dire questa affermazione (gen-feb)</a></li>
+                <li class="mb-3"><a>honey and glass (nov-dic 2021)</a></li>
+                <li class="mb-3"><a>(Revenge) Training Arc h🦍</a></li>
+                <li class="mb-3"><a>Lidia 🤝 Emily</a></li>
+                <li class="mb-3"><a>minecraft e nintendo switch (sep-oct 2021)</a></li>
+                <li class="mb-3"><a>silvano d'orba? I hardly know her (lug - ago 2021)</a></li>
+                <li class="mb-3"><a>Culo 2021</a></li>
+                <li class="mb-3"><a>Frah Quintale Mix</a></li>
+                <li class="mb-3"><a>Francesco Guccini Mix</a></li>
+              </ul>
+            </div>
+
+            <!-- <div>
               Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
               lists, etc.
             </div>
@@ -47,13 +106,13 @@
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
 
         <!-- -------------------------------------------------------- -->
 
-        <div class="col-3 bg-black d-none d-md-inline-block" id="collapseWidthExample">
+        <div class="col-3 bg-black d-none d-md-inline-block">
           <div class="container">
             <button
               class="btn button border-0 bg-black px-0 fs-3"
@@ -119,7 +178,6 @@
               <li class="mb-3"><a>Frah Quintale Mix</a></li>
               <li class="mb-3"><a>Francesco Guccini Mix</a></li>
             </ul>
-            <!-- </div> -->
           </div>
         </div>
 
