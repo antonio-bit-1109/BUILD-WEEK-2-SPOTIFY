@@ -82,6 +82,8 @@ const populatePopolarSongs = (infoResult) => {
     };
     divContainer.innerHTML = "";
 
+    /*  PERCHE SPARISCE SCRITTA POPOLARI , RENDERE CONTAINER CON SCROOL VERTICALE , MINOR PADDING PLAYER E FOLLOWING BUTTON  */
+
     for (let i = 0; i < infoResult.length; i++) {
         const singleSong = infoResult[i];
 
