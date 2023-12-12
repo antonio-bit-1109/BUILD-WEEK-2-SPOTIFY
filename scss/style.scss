@@ -3,3 +3,160 @@
 .h-playBar {
     height: 10px;
 }
+
+li{
+list-style: none;
+}
+
+.navAnchor{text-decoration: none;
+color: white;
+cursor: pointer;
+
+
+&:hover{
+    color: white;
+    font-weight: 700;
+}}
+
+
+
+.plus{
+    background-color: white;
+    padding-block: 2px;
+    padding-inline: 6px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.heart{
+    background: rgb(46,12,149);
+    background: linear-gradient(139deg, rgba(46,12,149,1) 37%, rgba(255,255,255,1) 100%);
+    padding-block: 2px;
+    padding-inline: 6px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.label{
+    background-color: #004537;
+    padding-block: 2px;
+    padding-inline: 6px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.cont-1{
+    height: 60vh;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.friends{
+    div{
+        img{
+            width: 40px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.button{
+    color: white;
+
+    &:hover{
+    color: #08FC1E;
+    }
+ 
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+
+
+  .gradient-spotify {
+    background: rgb(2, 0, 36);
+    background: -moz-linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(237, 57, 212, 1) 0%,
+        rgba(13, 110, 253, 1) 0%,
+        rgba(111, 106, 106, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(237, 57, 212, 1) 0%,
+        rgba(13, 110, 253, 1) 0%,
+        rgba(111, 106, 106, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(237, 57, 212, 1) 0%,
+        rgba(13, 110, 253, 1) 0%,
+        rgba(111, 106, 106, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#000000",GradientType=1);
+}
+
+.w-60 {
+    width: 60% !important;
+}
+
+.start-60 {
+    left: 60% !important;
+}
+
+.bg-button {
+    background-color: #1e1e1e;
+}
+
+.mb-6 {
+    margin-bottom: 4rem !important;
+}
+
+.secondary-light {
+    background-color: rgb(201, 191, 191);
+}
+
+body {
+    #sezioneAnto {
+        .col-7 {
+            #container-centale-canzoni {
+                
+                #contenitoreFluido {
+                    @media screen and (min-width: 1px) {
+                        width: 100% !important;
+                    }
+                    @media screen and (min-width: 992px) {
+                        width: 60% !important;
+                    }
+                }
+            }
+        }
+    }
+}
