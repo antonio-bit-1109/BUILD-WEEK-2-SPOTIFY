@@ -47,7 +47,7 @@ const getNameArtist = (result) => {
     console.log(infoResult);
 
     /* info generali artista  */
-    let infoGenerali = infoResult[0].artist;
+    let infoGenerali = infoResult[0].artist || null;
     console.log(infoGenerali);
 
     populatingImageTitle(infoGenerali);
