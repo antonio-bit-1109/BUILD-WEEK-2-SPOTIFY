@@ -12,11 +12,6 @@ window.addEventListener("DOMContentLoaded", () => {
         },
     };
 
-    const buttonSearch = document.getElementById("js-button-search");
-    buttonSearch.addEventListener("click", () => {
-        getrequest(options);
-    });
-
     window.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
             getrequest(options);
