@@ -203,6 +203,7 @@
                     <div class="row">
                         <!-- Background image -->
                         <div
+                            id="js-img-sfondo-autore"
                             class="bg-image w-100"
                             style="
                                 background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
@@ -247,22 +248,18 @@
                                         </button>
                                     </div>
                                     <div class="ms-auto">
-                                        <div class="btn-group dropstart">
-                                            <button
-                                                type="button"
-                                                class="btn btn-outline-secondary dropdown-toggle"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                            >
-                                                Nome Autore
+                                        <div class="input-group mb-3">
+                                            <button class="btn border text-light" type="button" id="js-button-search">
+                                                Button
                                             </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                                <li><hr class="dropdown-divider" /></li>
-                                                <li><a class="dropdown-item" href="#">Separated link</a></li>
-                                            </ul>
+                                            <input
+                                                id="input-search"
+                                                type="text"
+                                                class="form-control bg-transparent text-light"
+                                                placeholder=" inserisci nome artista..."
+                                                aria-label="Example text with button addon"
+                                                aria-describedby="js-button-search"
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -279,8 +276,8 @@
                                     prova artista verificato
                                 </h6>
 
-                                <h1 class="display-1 fw-bold">titolo artista</h1>
-                                <h6 class="my-3">(valore js) ascoltatori mensili</h6>
+                                <h1 id="js-h1-artist" class="display-1 fw-bold">titolo artista</h1>
+                                <h6 class="my-5">(valore js) ascoltatori mensili</h6>
                             </div>
                         </div>
                     </div>
@@ -318,130 +315,10 @@
                         <div class="row">
                             <div class="col-12 col-xxl-8">
                                 <div id="part2">
-                                    <div class="col-12">
+                                    <div id="js-box-inner-part2" class="col-12">
                                         <div class="row">
                                             <div class="col">
                                                 <div class="my-4"><h4 class="text-light">Popolari</h4></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="d-flex text-light justify-content-between my-2">
-                                                    <div class="d-flex gap-2 align-items-center">
-                                                        <div class="mx-1">n</div>
-                                                        <img
-                                                            aria-hidden="false"
-                                                            draggable="false"
-                                                            loading="eager"
-                                                            src="https://i.scdn.co/image/ab67616d000048516ca5c90113b30c3c43ffb8f4"
-                                                            alt=""
-                                                            class="mMx2LUixlnN_Fu45JpFB rkw8BWQi3miXqtlJhKg0 Yn2Ei5QZn19gria6LjZj"
-                                                            width="40"
-                                                            height="40"
-                                                            style="border-radius: 4px"
-                                                        />
-                                                        <p>Lorem, ipsum dolor.</p>
-                                                    </div>
-                                                    <div><p>848.593.483</p></div>
-                                                    <div>durata</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="d-flex text-light justify-content-between my-2">
-                                                    <div class="d-flex gap-2 align-items-center">
-                                                        <div class="mx-1">n</div>
-                                                        <img
-                                                            aria-hidden="false"
-                                                            draggable="false"
-                                                            loading="eager"
-                                                            src="https://i.scdn.co/image/ab67616d000048516ca5c90113b30c3c43ffb8f4"
-                                                            alt=""
-                                                            class="mMx2LUixlnN_Fu45JpFB rkw8BWQi3miXqtlJhKg0 Yn2Ei5QZn19gria6LjZj"
-                                                            width="40"
-                                                            height="40"
-                                                            style="border-radius: 4px"
-                                                        />
-                                                        <p>Lorem, ipsum dolor.</p>
-                                                    </div>
-                                                    <div><p>848.593.483</p></div>
-                                                    <div>durata</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="d-flex text-light justify-content-between my-2">
-                                                    <div class="d-flex gap-2 align-items-center">
-                                                        <div class="mx-1">n</div>
-                                                        <img
-                                                            aria-hidden="false"
-                                                            draggable="false"
-                                                            loading="eager"
-                                                            src="https://i.scdn.co/image/ab67616d000048516ca5c90113b30c3c43ffb8f4"
-                                                            alt=""
-                                                            class="mMx2LUixlnN_Fu45JpFB rkw8BWQi3miXqtlJhKg0 Yn2Ei5QZn19gria6LjZj"
-                                                            width="40"
-                                                            height="40"
-                                                            style="border-radius: 4px"
-                                                        />
-                                                        <p>Lorem, ipsum dolor.</p>
-                                                    </div>
-                                                    <div><p>848.593.483</p></div>
-                                                    <div>durata</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="d-flex text-light justify-content-between my-2">
-                                                    <div class="d-flex gap-2 align-items-center">
-                                                        <div class="mx-1">n</div>
-                                                        <img
-                                                            aria-hidden="false"
-                                                            draggable="false"
-                                                            loading="eager"
-                                                            src="https://i.scdn.co/image/ab67616d000048516ca5c90113b30c3c43ffb8f4"
-                                                            alt=""
-                                                            class="mMx2LUixlnN_Fu45JpFB rkw8BWQi3miXqtlJhKg0 Yn2Ei5QZn19gria6LjZj"
-                                                            width="40"
-                                                            height="40"
-                                                            style="border-radius: 4px"
-                                                        />
-                                                        <p>Lorem, ipsum dolor.</p>
-                                                    </div>
-                                                    <div><p>848.593.483</p></div>
-                                                    <div>durata</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="d-flex text-light justify-content-between my-2">
-                                                    <div class="d-flex gap-2 align-items-center">
-                                                        <div class="mx-1">n</div>
-                                                        <img
-                                                            aria-hidden="false"
-                                                            draggable="false"
-                                                            loading="eager"
-                                                            src="https://i.scdn.co/image/ab67616d000048516ca5c90113b30c3c43ffb8f4"
-                                                            alt=""
-                                                            class="mMx2LUixlnN_Fu45JpFB rkw8BWQi3miXqtlJhKg0 Yn2Ei5QZn19gria6LjZj"
-                                                            width="40"
-                                                            height="40"
-                                                            style="border-radius: 4px"
-                                                        />
-                                                        <p>Lorem, ipsum dolor.</p>
-                                                    </div>
-                                                    <div><p>848.593.483</p></div>
-                                                    <div>durata</div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
