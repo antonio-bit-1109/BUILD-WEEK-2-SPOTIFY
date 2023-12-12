@@ -8,7 +8,7 @@ li{
 list-style: none;
 }
 
-a{text-decoration: none;
+.navAnchor{text-decoration: none;
 color: white;
 cursor: pointer;
 
@@ -19,10 +19,6 @@ cursor: pointer;
 }}
 
 
-i, span {
-    display: inline-block;
-    vertical-align: middle;
-}
 
 .plus{
     background-color: white;
@@ -151,6 +147,7 @@ body {
     #sezioneAnto {
         .col-7 {
             #container-centale-canzoni {
+                
                 #contenitoreFluido {
                     @media screen and (min-width: 1px) {
                         width: 100% !important;

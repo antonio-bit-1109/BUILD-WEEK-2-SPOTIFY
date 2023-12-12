@@ -11070,19 +11070,14 @@ li {
   list-style: none;
 }
 
-a {
+.navAnchor {
   text-decoration: none;
   color: white;
   cursor: pointer;
 }
-a:hover {
+.navAnchor:hover {
   color: white;
   font-weight: 700;
-}
-
-i, span {
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .plus {
