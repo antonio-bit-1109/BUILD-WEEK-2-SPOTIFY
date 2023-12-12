@@ -136,3 +136,29 @@ li {
 .secondary-light {
     background-color: rgb(201, 191, 191);
 }
+
+.Content-area {
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 37%,
+        rgba(191, 168, 2, 1) 63%,
+        rgba(231, 204, 3, 1) 77%,
+        rgba(255, 225, 3, 1) 94%
+    );
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 37%,
+        rgba(191, 168, 2, 1) 63%,
+        rgba(231, 204, 3, 1) 77%,
+        rgba(255, 225, 3, 1) 94%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 37%,
+        rgba(191, 168, 2, 1) 63%,
+        rgba(231, 204, 3, 1) 77%,
+        rgba(255, 225, 3, 1) 94%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#ffe103", GradientType=1);
+}
