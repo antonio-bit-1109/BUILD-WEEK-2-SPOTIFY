@@ -4,38 +4,37 @@
     height: 10px;
 }
 
-li{
-list-style: none;
+li {
+    list-style: none;
 }
 
-.navAnchor{text-decoration: none;
-color: white;
-cursor: pointer;
-
-
-&:hover{
+.navAnchor {
+    text-decoration: none;
     color: white;
-    font-weight: 700;
-}}
+    cursor: pointer;
 
+    &:hover {
+        color: white;
+        font-weight: 700;
+    }
+}
 
-
-.plus{
+.plus {
     background-color: white;
     padding-block: 2px;
     padding-inline: 6px;
     font-size: 15px;
     border-radius: 5px;
 }
-.heart{
-    background: rgb(46,12,149);
-    background: linear-gradient(139deg, rgba(46,12,149,1) 37%, rgba(255,255,255,1) 100%);
+.heart {
+    background: rgb(46, 12, 149);
+    background: linear-gradient(139deg, rgba(46, 12, 149, 1) 37%, rgba(255, 255, 255, 1) 100%);
     padding-block: 2px;
     padding-inline: 6px;
     font-size: 15px;
     border-radius: 5px;
 }
-.label{
+.label {
     background-color: #004537;
     padding-block: 2px;
     padding-inline: 6px;
@@ -43,55 +42,50 @@ cursor: pointer;
     border-radius: 5px;
 }
 
-.cont-1{
+.cont-1 {
     height: 60vh;
     overflow-x: hidden;
     text-overflow: ellipsis;
 }
 
-
-.friends{
-    div{
-        img{
+.friends {
+    div {
+        img {
             width: 40px;
             border-radius: 50%;
         }
     }
 }
 
-.button{
+.button {
     color: white;
 
-    &:hover{
-    color: #08FC1E;
+    &:hover {
+        color: #08fc1e;
     }
- 
 }
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #000000; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000000;
+}
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
-  .gradient-spotify {
+.gradient-spotify {
     background: rgb(2, 0, 36);
     background: -moz-linear-gradient(
         180deg,
@@ -141,22 +135,4 @@ cursor: pointer;
 
 .secondary-light {
     background-color: rgb(201, 191, 191);
-}
-
-body {
-    #sezioneAnto {
-        .col-7 {
-            #container-centale-canzoni {
-                
-                #contenitoreFluido {
-                    @media screen and (min-width: 1px) {
-                        width: 100% !important;
-                    }
-                    @media screen and (min-width: 992px) {
-                        width: 60% !important;
-                    }
-                }
-            }
-        }
-    }
 }
