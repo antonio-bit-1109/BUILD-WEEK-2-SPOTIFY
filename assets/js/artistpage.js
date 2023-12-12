@@ -85,6 +85,7 @@ const populatePopolarSongs = (infoResult) => {
 
         return `${minuti}:${formatoSecondi}`;
     };
+    divContainer.innerHTML = "";
 
     for (let i = 0; i < infoResult.length; i++) {
         const singleSong = infoResult[i];
