@@ -120,7 +120,7 @@ const populatePopolarSongs = (infoResult) => {
                                     />
                                     <p>${singleSong.title}</p>
                                 </div>
-                                <div><p> ${singleSong.rank}</p></div>
+                                <div><p> ${singleSong.rank.toLocaleString()}</p></div>
                                 <div>${convertSecondsToMinutes(singleSong.duration)}</div>
                             </div>
                         </div>
@@ -148,9 +148,14 @@ const populateLikedSongs = (infoResult) => {
 const populateMonthFollowers = (infoResult) => {
     console.group(infoResult);
     let sommaAscoltatori = 0;
+    const ascoltatoriTotali = document.getElementById("monthListeners");
 
-    for (let singleAlbum of infoResult) {
-        ascoltatoriSIngleAlbum = singleAlbum.rank;
+    for (let ascoltatoriSIngleAlbum of infoResult) {
+        ascoltatoriSIngleAlbum = ascoltatoriSIngleAlbum.rank;
         console.log(ascoltatoriSIngleAlbum);
+
+        sommaAscoltatori += ascoltatoriSIngleAlbum;
     }
+
+    ascoltatoriTotali.innerHTML = `ascoltatori mensili: ${sommaAscoltatori.toLocaleString()}`;
 };
