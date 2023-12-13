@@ -83,7 +83,11 @@ const populatePopolarSongs = (infoResult) => {
         return `${minuti}:${formatoSecondi}`;
     };
 
-    divContainer.innerHTML = "";
+    divContainer.innerHTML = `
+                                             <div class="col">
+                                                <div class="my-4"><h4 class="text-light">Popolari</h4></div>
+                                            </div>
+    `;
 
     /*  PERCHE SPARISCE SCRITTA POPOLARI , 
     RENDERE CONTAINER CON SCROOL VERTICALE ,
@@ -102,8 +106,10 @@ const populatePopolarSongs = (infoResult) => {
                                         aria-hidden="false"
                                         draggable="false"
                                         loading="eager"
-                                        src="https://i.scdn.co/image/ab67616d000048516ca5c90113b30c3c43ffb8f4"
-                                        alt= "canzone di ${singleSong.artist.name} titolo ${singleSong.album.title}"
+                                        src="${singleSong.album.cover_small}"
+                                        alt= "canzone di ${singleSong.artist.name} titolo ${
+            singleSong.album.title_short
+        }"
                                         class="mMx2LUixlnN_Fu45JpFB rkw8BWQi3miXqtlJhKg0 Yn2Ei5QZn19gria6LjZj"
                                         width="40"
                                         height="40"
