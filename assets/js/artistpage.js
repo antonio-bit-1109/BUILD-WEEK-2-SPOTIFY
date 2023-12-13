@@ -16,21 +16,56 @@ window.addEventListener("DOMContentLoaded", () => {
         },
     };
 
-    window.addEventListener("keydown", (event) => {
+    /* window.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
-            getrequest(options);
+            getrequestToArtistApi(options).then((nameArtist) => {
+                console.log("nome artista ", nameArtist);
+                getrequest(options, nameArtist);
+            });
         }
-    });
+    }); */
 
-    getrequest(options);
+    getrequestToArtistApi(options).then((nameArtist) => {
+        console.log("nome artista ", nameArtist);
+        getrequest(options, nameArtist);
+    });
 });
 
-const getrequest = (options) => {
-    let inputSearch = document.getElementById("input-search").value || JSON.parse(localStorage.getItem("search"));
+const getrequestToArtistApi = (options) => {
+    const url = `https://deezerdevs-deezer.p.rapidapi.com/artist/${id}`;
 
-    localStorage.setItem("search", JSON.stringify(inputSearch));
+    return new Promise((resolve, reject) => {
+        fetch(url, options)
+            .then((result) => {
+                console.log(result);
+                if (result.ok) {
+                    return result.json();
+                } else {
+                    reject("Errore nella richiesta API");
+                }
+            })
+            .then((result) => {
+                console.log(result);
+                const nameArtist = result.name;
+                console.log(nameArtist);
+                resolve(nameArtist);
+            })
+            .catch((err) => {
+                console.log(err);
+                reject(err);
+            });
+    });
+};
 
-    const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${id}`;
+const getrequest = (options, nameArtist) => {
+    /*    let inputSearch = document.getElementById("input-search").value || JSON.parse(localStorage.getItem("search"));
+
+    localStorage.setItem("search", JSON.stringify(inputSearch)); */
+
+    const encodedString = encodeURIComponent(nameArtist);
+    console.log(encodedString);
+
+    const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${encodedString}`;
 
     fetch(url, options)
         .then((result) => {
