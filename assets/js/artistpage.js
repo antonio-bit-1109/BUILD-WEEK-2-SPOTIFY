@@ -17,6 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
             getrequest(options);
         }
     });
+
     getrequest(options);
 });
 
@@ -55,6 +56,7 @@ const getNameArtist = (result) => {
     populatingImageTitle(infoGenerali);
     populatePopolarSongs(infoResult);
     populateLikedSongs(infoResult);
+    populateMonthFollowers(infoResult);
 };
 
 const populatingImageTitle = (infoGenerali) => {
@@ -140,5 +142,15 @@ const populateLikedSongs = (infoResult) => {
         likedSongsIcon.src = singleAlbum.artist.picture_small;
         commento1.innerHTML = ` Hai messo mi piace a ${randomNumber} brani`;
         commento2.innerHTML = `Di ${singleAlbum.artist.name}`;
+    }
+};
+
+const populateMonthFollowers = (infoResult) => {
+    console.group(infoResult);
+    let sommaAscoltatori = 0;
+
+    for (let singleAlbum of infoResult) {
+        ascoltatoriSIngleAlbum = singleAlbum.rank;
+        console.log(ascoltatoriSIngleAlbum);
     }
 };

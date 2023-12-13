@@ -166,3 +166,12 @@ li {
 .text-shadow {
     text-shadow: 3px 3px white;
 }
+
+.text-shadow-sm {
+    text-shadow: 1px 1px white;
+}
+
+.overflow-section {
+    overflow-y: scroll;
+    height: 50vh;
+}
