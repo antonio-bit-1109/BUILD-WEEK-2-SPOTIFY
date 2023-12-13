@@ -21,7 +21,9 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 const getrequest = (options) => {
-    let inputSearch = document.getElementById("input-search").value;
+    let inputSearch = document.getElementById("input-search").value || JSON.parse(localStorage.getItem("search"));
+
+    localStorage.setItem("search", JSON.stringify(inputSearch));
 
     const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${inputSearch}`;
 
@@ -47,7 +49,7 @@ const getNameArtist = (result) => {
     console.log(infoResult);
 
     /* info generali artista  */
-    let infoGenerali = infoResult[0].artist || null;
+    let infoGenerali = infoResult[0].artist;
     console.log(infoGenerali);
 
     populatingImageTitle(infoGenerali);
@@ -80,6 +82,7 @@ const populatePopolarSongs = (infoResult) => {
 
         return `${minuti}:${formatoSecondi}`;
     };
+
     divContainer.innerHTML = "";
 
     /*  PERCHE SPARISCE SCRITTA POPOLARI , 
