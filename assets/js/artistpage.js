@@ -97,7 +97,7 @@ const populatePopolarSongs = (infoResult) => {
                     <div class="row">
                         <div class="col-12">
                             <div class="d-flex text-light justify-content-between my-2">
-                                <div class="d-flex gap-2 align-items-center">
+                                <div class="d-flex gap-2 align-items-center min-width-1">
                                     <div class="mx-1">${i + 1}</div>
                                     <img
                                         aria-hidden="false"
@@ -114,8 +114,8 @@ const populatePopolarSongs = (infoResult) => {
                                     />
                                     <p>${singleSong.title}</p>
                                 </div>
-                                <div><p> ${singleSong.rank.toLocaleString()}</p></div>
-                                <div>${convertSecondsToMinutes(singleSong.duration)}</div>
+                                <div class="min-width-2 "><p> ${singleSong.rank.toLocaleString()}</p></div>
+                                <div class="min-width-3 ">${convertSecondsToMinutes(singleSong.duration)}</div>
                             </div>
                         </div>
                     </div>
