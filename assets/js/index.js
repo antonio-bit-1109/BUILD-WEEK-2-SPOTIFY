@@ -30,20 +30,16 @@ window.addEventListener("DOMContentLoaded", () => {
     const searchBar = document.getElementById("searchBar");
     let timer;
 
-    /*   searchBar.addEventListener("input", () => {
-    const valueSearched = searchBar.value;
+    searchBar.addEventListener("input", () => {
+        /*         const valueSearched = searchBar.value;
 
-    clearTimeout(timer);
-
-    timer = setTimeout(() => {
-      getPlaylists(valueSearched, "buonPomeriggio", "small");
-    }, 1000);
-  }); */
-    getPlaylists("power wolf", "buonPomeriggio", "small");
-    getPlaylists("linkin park", "ascoltatiDiRecente", "large");
-    getPlaylists("Saboton", "iTuoiMix", "large");
-    getPlaylists("woodkid", "popolare", "large");
-    getPlaylists("drake", "tendenze", "large");
+        clearTimeout(timer); */
+    });
+    getPlaylists("metaliica", "iTuoiMix", "large");
+    getPlaylists("justice", "ascoltatiDiRecente", "large");
+    getPlaylists("murubutu", "buonPomeriggio", "small");
+    getPlaylists("prodigy", "tendenze", "large");
+    getPlaylists("caparezza", "popolare", "large");
 });
 
 const generateCardList = (arrayObj, container, cardType) => {
@@ -58,7 +54,7 @@ const generateCardList = (arrayObj, container, cardType) => {
 const createCard = (obj, cardType) => {
     if (cardType == "small") {
         const card = document.createElement("div");
-        card.className = "col-4";
+        card.classList.add("col-12", "col-sm-6", "col-md-4");
         card.innerHTML = `
   <div class="card mb-3 customCard">
     <div class="row g-0">
@@ -82,7 +78,7 @@ const createCard = (obj, cardType) => {
         return card;
     } else if (cardType == "large") {
         const card = document.createElement("div");
-        card.className = "col-2 pb-2";
+        card.classList.add("pd-2", "col-12", "col-md-6", "col-lg-4", "col-xl-2");
         card.innerHTML = `
     <div class="card customCard">
     <div class="d-flex justify-content-center align-item-center position-relative">

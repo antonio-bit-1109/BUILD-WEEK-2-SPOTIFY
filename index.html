@@ -12,7 +12,7 @@
         />
         <link rel="stylesheet" href="./assets/css/custom.css" />
     </head>
-    <body class="bg-body">
+    <body class="gradient-spotify">
         <section class="container-fluid mx-0">
             <div class="row">
                 <div class="col-auto d-inline-block d-lg-none bg-black">
@@ -202,45 +202,45 @@
                 <!-- -----------------MAIN -------------------------->
                 <div id="main-section" class="col col-lg-8 vh-100 overflow-y-auto">
                     <div class="row sticky-top bg-dark">
-                        <div class="col-12">
-                            <div class="d-flex justify-content-between align-items-center mt-2 mb-2">
-                                <div>
-                                    <i class="bi bi-arrow-left-circle px-3 display-6"></i>
-                                    <i class="bi bi-arrow-right-circle display-6"></i>
-                                </div>
-                                <div>
-                                    <select class="form-select rounded-pill" aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
+                        <div class="col-12 col-md-8 col-lg-6 col-xl-4">
+                            <div class="ms-auto">
+                                <div class="input-group mb-3">
+                                    <input
+                                        id="searchBar"
+                                        type="text"
+                                        class="form-control bg-transparent text-light"
+                                        placeholder=" inserisci nome artista..."
+                                        aria-label="Example text with button addon"
+                                        aria-describedby="js-button-search"
+                                    />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="p-2">Buongiorno</h2>
-                            <div id="buonPomeriggio" class="row"></div>
+                    <div class="overflow-section-modified">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="p-2 text-light">Buongiorno</h2>
+                                <div id="buonPomeriggio" class="row"></div>
+                            </div>
+                            <div class="col-12 text-light">
+                                <h2 class="p-2">Ascoltati di recente</h2>
+                                <div id="ascoltatiDiRecente" class="row">primi 3 album</div>
+                            </div>
+                            <div class="col-12 text-light">
+                                <h2 class="p-2">I tuoi mix preferiti</h2>
+                                <div id="iTuoiMix" class="row">secondi 3 album</div>
+                            </div>
                         </div>
-                        <div class="col-12">
-                            <h2 class="p-2">Ascoltati di recente</h2>
-                            <div id="ascoltatiDiRecente" class="row">primi 3 album</div>
-                        </div>
-                        <div class="col-12">
-                            <h2 class="p-2">I tuoi mix preferiti</h2>
-                            <div id="iTuoiMix" class="row">secondi 3 album</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="p-2">Consigliati per te</h2>
-                            <div id="popolare" class="row">Popolare tra chi ascolta</div>
-                        </div>
-                        <div class="col-12">
-                            <h2 class="p-2">In base alle tue preferenze</h2>
-                            <div id="tendenze" class="row">Immagini di album</div>
+                        <div class="row">
+                            <div class="col-12 text-light">
+                                <h2 class="p-2">Consigliati per te</h2>
+                                <div id="popolare" class="row">Popolare tra chi ascolta</div>
+                            </div>
+                            <div class="col-12 text-light">
+                                <h2 class="p-2">In base alle tue preferenze</h2>
+                                <div id="tendenze" class="row">Immagini di album</div>
+                            </div>
                         </div>
                     </div>
                 </div>

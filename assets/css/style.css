@@ -11146,6 +11146,11 @@ li {
   height: 50vh;
 }
 
+.overflow-section-modified {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
 .min-width-1 {
   min-width: 200px;
 }
