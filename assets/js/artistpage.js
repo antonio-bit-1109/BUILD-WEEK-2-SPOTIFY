@@ -1,8 +1,6 @@
 import { token } from "./token.js";
 console.log(token);
 
-/* inserire un input dal quale cercare l'artista */
-
 window.addEventListener("DOMContentLoaded", () => {
     const options = {
         method: "GET",
@@ -91,10 +89,6 @@ const populatePopolarSongs = (infoResult) => {
                                                 <div class="my-4"><h4 class="text-light">Popolari</h4></div>
                                             </div>
     `;
-
-    /*  PERCHE SPARISCE SCRITTA POPOLARI , 
-    RENDERE CONTAINER CON SCROOL VERTICALE ,
-     MINOR PADDING PLAYER E FOLLOWING BUTTON  */
 
     for (let i = 0; i < infoResult.length; i++) {
         const singleSong = infoResult[i];
