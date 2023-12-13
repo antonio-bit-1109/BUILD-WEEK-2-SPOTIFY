@@ -11163,6 +11163,10 @@ li {
   min-width: 70px;
 }
 
+.small-card {
+  max-width: 80px;
+}
+
 .Content-area {
   background: rgb(0, 0, 0);
   background: -moz-linear-gradient(0deg, rgb(0, 0, 0) 37%, rgb(191, 168, 2) 63%, rgb(231, 204, 3) 77%, rgb(255, 225, 3) 94%);

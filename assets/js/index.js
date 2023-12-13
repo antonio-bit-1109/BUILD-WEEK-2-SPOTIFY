@@ -56,15 +56,15 @@ const createCard = (obj, cardType) => {
         const card = document.createElement("div");
         card.classList.add("col-12", "col-sm-6", "col-md-4");
         card.innerHTML = `
-  <div class="card mb-3 customCard">
+  <div class="card mb-3">
     <div class="row g-0">
       <div class="col-2">
         <img
           src="${obj.album.cover}"
-          class="img-fluid fix-h-80 fix-w-80 rounded-start"
-          alt="..."
+          class="small-card"
+          alt="card"
         />
-        <img src="./assets/imgs/play-fill.svg"  class="position-absolute positionCustom">
+        
 
       </div>
       <div class="col-10">
