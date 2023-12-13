@@ -1,6 +1,12 @@
 import { token } from "./token.js";
 console.log(token);
 
+const params = new URLSearchParams(window.location.search);
+console.log("params", params);
+
+const id = params.get("idAlbum");
+console.log(" id ", id);
+
 window.addEventListener("DOMContentLoaded", () => {
     const options = {
         method: "GET",
@@ -10,19 +16,15 @@ window.addEventListener("DOMContentLoaded", () => {
         },
     };
 
-    window.addEventListener("keydown", (event) => {
+    /*     window.addEventListener("keydown", (event) => {
         getrequest(options);
-    });
+    }); */
 
     getrequest(options);
 });
 
 const getrequest = (options) => {
-    let inputSearch = document.getElementById("input-search").value || JSON.parse(localStorage.getItem("search"));
-
-    localStorage.setItem("search", JSON.stringify(inputSearch));
-
-    const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${inputSearch}`;
+    const url = `https://deezerdevs-deezer.p.rapidapi.com/album/${id}`;
 
     fetch(url, options)
         .then((result) => {
@@ -32,11 +34,24 @@ const getrequest = (options) => {
             }
         })
         .then((result) => {
-            getNameArtist(result);
+            populatealbumPage(result);
         })
         .catch((err) => {
             console.log(err);
         });
 };
 
-const getNameArtist = (result) => {};
+const populatealbumPage = (result) => {
+    console.log(result);
+
+    const allGeneralInfo = result.data;
+
+    populateUpperSection(allGeneralInfo);
+};
+
+const populateUpperSection = (allGeneralInfo) => {
+    console.log(allGeneralInfo);
+
+    const titleAlbum = allGeneralInfo.album.title;
+    console.log(titleAlbum);
+};
