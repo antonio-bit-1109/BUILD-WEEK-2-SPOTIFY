@@ -68,7 +68,7 @@ const createCard = (obj, cardType) => {
 
       </div>
       <div class="col-10">
-        <div class="card-body d-flex justify-content-center align-items-center">
+        <div class="card-body d-flex justify-content-center align-items-center h-100 w-80">
           <h6 class="card-title m-0">${obj.album.title}</h6>
         </div>
       </div>
