@@ -36,8 +36,8 @@ window.addEventListener("DOMContentLoaded", () => {
         clearTimeout(timer); */
     });
     getPlaylists("metaliica", "iTuoiMix", "large");
-    getPlaylists("justice", "ascoltatiDiRecente", "large");
-    getPlaylists("murubutu", "buonPomeriggio", "small");
+    getPlaylists("linkin park", "ascoltatiDiRecente", "large");
+    getPlaylists("fallen in reverse", "buonPomeriggio", "small");
     getPlaylists("prodigy", "tendenze", "large");
     getPlaylists("caparezza", "popolare", "large");
 });
@@ -68,7 +68,7 @@ const createCard = (obj, cardType) => {
 
       </div>
       <div class="col-10">
-        <div class="card-body d-flex justify-content-center">
+        <div class="card-body d-flex justify-content-center align-items-center">
           <h6 class="card-title m-0">${obj.album.title}</h6>
         </div>
       </div>
