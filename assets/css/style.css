@@ -11131,4 +11131,8 @@ li {
   background: -webkit-linear-gradient(0deg, rgb(0, 0, 0) 37%, rgb(191, 168, 2) 63%, rgb(231, 204, 3) 77%, rgb(255, 225, 3) 94%);
   background: linear-gradient(0deg, rgb(0, 0, 0) 37%, rgb(191, 168, 2) 63%, rgb(231, 204, 3) 77%, rgb(255, 225, 3) 94%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#ffe103", GradientType=1);
+}
+
+.text-shadow {
+  text-shadow: 3px 3px white;
 }/*# sourceMappingURL=style.css.map */
