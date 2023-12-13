@@ -54,6 +54,7 @@ const getNameArtist = (result) => {
 
     populatingImageTitle(infoGenerali);
     populatePopolarSongs(infoResult);
+    populateLikedSongs(infoResult);
 };
 
 const populatingImageTitle = (infoGenerali) => {
@@ -123,5 +124,21 @@ const populatePopolarSongs = (infoResult) => {
                         </div>
                     </div>
         `;
+    }
+};
+
+const populateLikedSongs = (infoResult) => {
+    console.log(infoResult);
+
+    const likedSongsIcon = document.getElementById("js-img-likedSongs");
+    const commento1 = document.getElementById("commento1");
+    const commento2 = document.getElementById("commento2");
+
+    let randomNumber = Math.floor(Math.random() * 50);
+
+    for (let singleAlbum of infoResult) {
+        likedSongsIcon.src = singleAlbum.artist.picture_small;
+        commento1.innerHTML = ` Hai messo mi piace a ${randomNumber} brani`;
+        commento2.innerHTML = `Di ${singleAlbum.artist.name}`;
     }
 };
