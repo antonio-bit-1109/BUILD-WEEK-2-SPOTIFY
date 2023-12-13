@@ -1,6 +1,12 @@
 import { token } from "./token.js";
 console.log(token);
 
+const params = new URLSearchParams(window.location.search);
+console.log("params", params);
+
+const id = params.get("idArtist");
+console.log(" id ", id);
+
 window.addEventListener("DOMContentLoaded", () => {
     const options = {
         method: "GET",
@@ -24,7 +30,7 @@ const getrequest = (options) => {
 
     localStorage.setItem("search", JSON.stringify(inputSearch));
 
-    const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${inputSearch}`;
+    const url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${id}`;
 
     fetch(url, options)
         .then((result) => {
