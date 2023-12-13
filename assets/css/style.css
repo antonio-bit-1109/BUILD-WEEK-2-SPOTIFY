@@ -11173,4 +11173,36 @@ li {
   background: -webkit-linear-gradient(0deg, rgb(0, 0, 0) 37%, rgb(191, 168, 2) 63%, rgb(231, 204, 3) 77%, rgb(255, 225, 3) 94%);
   background: linear-gradient(0deg, rgb(0, 0, 0) 37%, rgb(191, 168, 2) 63%, rgb(231, 204, 3) 77%, rgb(255, 225, 3) 94%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#ffe103", GradientType=1);
+}
+
+.positionCustom {
+  bottom: 0.6rem;
+  right: 1rem;
+}
+
+.positionCustom {
+  display: none;
+}
+
+.customCard:hover .positionCustom {
+  display: block;
+  width: 2.7rem;
+  bottom: 0.8rem;
+  right: 1rem;
+  padding-left: 0.2rem;
+  cursor: pointer;
+  background-color: #08fc1e;
+  border-radius: 100px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: inherit;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */

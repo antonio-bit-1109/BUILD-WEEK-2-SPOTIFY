@@ -56,7 +56,7 @@ const createCard = (obj, cardType) => {
         const card = document.createElement("div");
         card.classList.add("col-12", "col-sm-6", "col-md-4");
         card.innerHTML = `
-  <div class="card mb-3">
+  <div class="card m-2">
     <div class="row g-0">
       <div class="col-2">
         <img
@@ -68,7 +68,7 @@ const createCard = (obj, cardType) => {
 
       </div>
       <div class="col-10">
-        <div class="card-body">
+        <div class="card-body d-flex justify-content-center">
           <h6 class="card-title m-0">${obj.album.title}</h6>
         </div>
       </div>
@@ -80,7 +80,7 @@ const createCard = (obj, cardType) => {
         const card = document.createElement("div");
         card.classList.add("pd-2", "col-12", "col-md-6", "col-lg-4", "col-xl-2");
         card.innerHTML = `
-    <div class="card customCard">
+    <div class="card customCard m-2">
     <div class="d-flex justify-content-center align-item-center position-relative">
     <img src="${obj.album.cover}" class="card-img-top max-h-180 max-w-180 object-fit-cover mx-2 mt-2 rounded" alt="...">
     <img src="./assets/imgs/play-fill.svg"  class="position-absolute positionCustom">
