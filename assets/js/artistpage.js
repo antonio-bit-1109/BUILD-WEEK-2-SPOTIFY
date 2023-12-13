@@ -126,16 +126,25 @@ const populatePopolarSongs = (infoResult) => {
 const populateLikedSongs = (infoResult) => {
     console.log(infoResult);
 
-    const likedSongsIcon = document.getElementById("js-img-likedSongs");
-    const commento1 = document.getElementById("commento1");
-    const commento2 = document.getElementById("commento2");
+    const likedSongsIcon = document.querySelectorAll(".js-img-likedSongs");
+
+    const commento1 = document.querySelectorAll(".commento1");
+    const commento2 = document.querySelectorAll(".commento2");
 
     let randomNumber = Math.floor(Math.random() * 50);
 
     for (let singleAlbum of infoResult) {
-        likedSongsIcon.src = singleAlbum.artist.picture_small;
-        commento1.innerHTML = ` Hai messo mi piace a ${randomNumber} brani`;
-        commento2.innerHTML = `Di ${singleAlbum.artist.name}`;
+        likedSongsIcon.forEach((icon) => {
+            icon.src = singleAlbum.artist.picture_small;
+        });
+
+        commento1.forEach((comm) => {
+            comm.innerHTML = ` Hai messo mi piace a ${randomNumber} brani`;
+        });
+
+        commento2.forEach((comm) => {
+            comm.innerHTML = `Di ${singleAlbum.artist.name}`;
+        });
     }
 };
 
