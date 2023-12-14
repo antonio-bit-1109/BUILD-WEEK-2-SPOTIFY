@@ -43,20 +43,20 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 const generateCardList = (arrayObj, container, cardType) => {
-    const cardContainer = document.getElementById(container);
-    cardContainer.innerHTML = "";
-    for (let i = 0; i < 6; i++) {
-        let card = createCard(arrayObj.data[i], cardType);
-        cardContainer.appendChild(card);
-    }
+  const cardContainer = document.getElementById(container);
+  cardContainer.innerHTML = "";
+  for (let i = 0; i < 6; i++) {
+    let card = createCard(arrayObj.data[i], cardType);
+    cardContainer.appendChild(card);
+  }
 };
 
 const createCard = (obj, cardType) => {
-    if (cardType == "small") {
-        const card = document.createElement("div");
-        card.classList.add("col-12", "col-sm-6", "col-md-4");
-        card.innerHTML = `
-  <div class="card m-2">
+  if (cardType == "small") {
+    const card = document.createElement("div");
+    card.classList.add("col-12", "col-sm-6", "col-md-4");
+    card.innerHTML = `
+  <div class="card m-2 bg-dark text-white">
     <div class="row g-0">
       <div class="col-2">
         <img
@@ -75,21 +75,24 @@ const createCard = (obj, cardType) => {
     </div>
   </div>
     `;
-        return card;
-    } else if (cardType == "large") {
-        const card = document.createElement("div");
-        card.classList.add("pd-2", "col-12", "col-md-6", "col-lg-4", "col-xl-2");
-        card.innerHTML = `
-    <div class="card customCard m-2">
-    <div class="d-flex justify-content-center align-item-center position-relative">
-    <img src="${obj.album.cover}" class="card-img-top max-h-180 max-w-180 object-fit-cover mx-2 mt-2 rounded" alt="...">
+    return card;
+  } else if (cardType == "large") {
+    const card = document.createElement("div");
+    card.classList.add("pd-2", "col-12", "col-md-6", "col-lg-4", "col-xl-2");
+    card.innerHTML = `
+        
+    <div class="card customCard bg-black border-0 bg-opacity-50 m-2" style="width:10rem; min-height: 15rem ;">
+    <div class="d-flex justify-content-center align-item-center position-relative ">
+    <img src="${obj.album.cover}" class="card-img-top max-h-180 max-w-180 object-fit-cover mx-2 mt-2 rounded" alt="Album cover">
     <img src="./assets/imgs/play-fill.svg"  class="position-absolute positionCustom">
     </div>
     <div class="card-body fix-h-100 ">
       <h6 class="card-title overflowCustom max-h-50 fs-6"><a class="customColorA" href="./albumpage.html?idAlbum=${obj.album.id}">${obj.album.title}</a></h6>
       <p class="card-text fs-8"><a class="customColorA" href="./artistpage.html?idArtist=${obj.artist.id}&idAlbum=${obj.album.id}">${obj.artist.name}</a></p>
     </div>
-  </div>`;
-        return card;
-    }
+  </div>
+
+  `;
+    return card;
+  }
 };
