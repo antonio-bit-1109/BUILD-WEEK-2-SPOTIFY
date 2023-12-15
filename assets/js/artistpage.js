@@ -155,10 +155,10 @@ const populatePopolarSongs = (infoResult) => {
                                         height="40"
                                         style="border-radius: 4px"
                                     />
-                                    <p>${singleSong.title}</p>
+                                    <p class="m-0">${singleSong.title}</p>
                                 </div></button>
-                                <div class="min-width-2 "><p> ${singleSong.rank.toLocaleString()}</p></div>
-                                <div class="min-width-3 ">${convertSecondsToMinutes(singleSong.duration)}</div>
+                                <div class="min-width-2"> ${singleSong.rank.toLocaleString()}</div>
+                                <div class="min-width-3 d-flex">${convertSecondsToMinutes(singleSong.duration)}</div>
                             </div>
                         </div>
                     </div>
