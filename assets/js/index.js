@@ -293,7 +293,7 @@ const KeepListening = (informations) => {
                                         />
                                     </div>
                                     <!-----Dettagli album----->
-                                    <div class="col-lg-9 col-md-8 d-flex align-items-end">
+                                    <div class="col-lg-9 col-md-8 d-flex align-items-center">
                                         <div>
                                             <div class="d-flex justify-content-between align-items-center">
                                                
