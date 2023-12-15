@@ -24,14 +24,32 @@ function getPlaylists(value, container, cardType) {
             console.log("Lista di playlist:", data);
         })
         .catch((error) => {
-            console.error("Si è verificato un errore:", error.message);
+            console.error("Si è verificato un errore:", error);
         });
 }
+
+const sayHiProperly = () => {
+    const h2 = document.getElementById("sayHello");
+    let timeOfTheDay = new Date();
+    let currentHour = timeOfTheDay.getHours();
+
+    if (currentHour > 24 && currentHour < 6) {
+        h2.innerHTML = "Buonanotte!";
+    } else if (currentHour >= 6 && currentHour < 12) {
+        h2.innerHTML = "Buongiorno!";
+    } else if (currentHour >= 12 && currentHour < 18) {
+        h2.innerHTML = "Buon Pomeriggio!";
+    } else {
+        h2.innerHTML = "Buonasera!";
+    }
+};
 
 /* chiamata random ad artist  */
 window.addEventListener("load", () => {
     let randomNumber = Math.floor(Math.random() * 400);
     console.log(randomNumber);
+
+    sayHiProperly();
 
     const url0 = `https://deezerdevs-deezer.p.rapidapi.com/artist/${randomNumber}`;
 
