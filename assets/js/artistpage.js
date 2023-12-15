@@ -150,15 +150,17 @@ const populatePopolarSongs = (infoResult) => {
                                         alt= "canzone di ${singleSong.artist.name} titolo ${
             singleSong.album.title_short
         }"
-                                        class="mMx2LUixlnN_Fu45JpFB rkw8BWQi3miXqtlJhKg0 Yn2Ei5QZn19gria6LjZj"
+                                        
                                         width="40"
                                         height="40"
                                         style="border-radius: 4px"
                                     />
                                     <p class="m-0">${singleSong.title}</p>
                                 </div></button>
-                                <div class="min-width-2"> ${singleSong.rank.toLocaleString()}</div>
-                                <div class="min-width-3 d-flex">${convertSecondsToMinutes(singleSong.duration)}</div>
+                                <div class="min-width-2 h-50 my-auto"> ${singleSong.rank.toLocaleString()}</div>
+                                <div class="min-width-3 h-50 my-auto">${convertSecondsToMinutes(
+                                    singleSong.duration
+                                )}</div>
                             </div>
                         </div>
                     </div>
