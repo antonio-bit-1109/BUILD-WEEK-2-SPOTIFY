@@ -19,8 +19,9 @@ async function getPlaylists(value, container, cardType) {
 
         const data = await response.json();
         generateCardList(data, container, cardType);
-
         console.log("Lista di playlist:", data);
+
+        
     } catch (error) {
         console.error("Si è verificato un errore:", error.message);
     }
@@ -59,10 +60,10 @@ const createCard = (obj, cardType) => {
 
   <div class="card m-2 bg-dark text-white">
     <div class="row g-0">
-      <div class="col-2">
+      <div class="col-2 ">
         <img
           src="${obj.album.cover}"
-          class="small-card"
+          class="small-card rounded"
           alt="card"
         />
         
@@ -82,12 +83,12 @@ const createCard = (obj, cardType) => {
     card.classList.add("pd-2", "col-12", "col-md-6", "col-lg-4", "col-xl-2");
     card.innerHTML = `
         
-    <div class="card customCard bg-black border-0 bg-opacity-50 m-2" style="width:10rem; min-height: 15rem;">
+    <div class="card customCard bg-black bg-opacity-75 border-0 overflow:hidden " style="width:10.5rem; min-height: 15.6rem;">
     <div class="d-flex justify-content-center align-item-center position-relative ">
     <img src="${obj.album.cover}" class="card-img-top max-h-180 max-w-180 object-fit-cover mx-2 mt-2 rounded" alt="Album cover">
     <img src="./assets/imgs/play-fill.svg"  class="position-absolute positionCustom">
     </div>
-    <div class="card-body fix-h-100 ">
+    <div class="card-body fix-h-100 "'>
       <h6 class="card-title overflowCustom max-h-50 fs-6"><a class="customColorA" href="./albumpage.html?idAlbum=${obj.album.id}">${obj.album.title}</a></h6>
       <p class="card-text fs-8"><a class="customColorA" href="./artistpage.html?idArtist=${obj.artist.id}&idAlbum=${obj.album.id}">${obj.artist.name}</a></p>
     </div>
