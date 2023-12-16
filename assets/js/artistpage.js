@@ -16,18 +16,19 @@ window.addEventListener("DOMContentLoaded", () => {
         },
     };
 
-    window.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-            getrequestToArtistApi(options).then((nameArtist) => {
-                console.log("nome artista ", nameArtist);
-                getrequest(options, nameArtist);
-            });
-        }
-    });
-
     getrequestToArtistApi(options).then((nameArtist) => {
         console.log("nome artista ", nameArtist);
         getrequest(options, nameArtist);
+    });
+
+    let inputSearch = document.getElementById("searchArtist");
+    inputSearch.addEventListener("keydown", (event) => {
+        if (inputSearch.value && event.key === "Enter") {
+            getrequestToArtistApi(options).then((nameArtist) => {
+                console.log("nome artista ", nameArtist);
+                getrequest(options, inputSearch.value);
+            });
+        }
     });
 });
 
@@ -58,10 +59,6 @@ const getrequestToArtistApi = (options) => {
 };
 
 const getrequest = (options, nameArtist) => {
-    /* let inputSearch = document.getElementById("input-search").value || JSON.parse(localStorage.getItem("search"));
-
-    localStorage.setItem("search", JSON.stringify(inputSearch)); */
-
     const encodedString = encodeURIComponent(nameArtist);
     console.log(encodedString);
 
