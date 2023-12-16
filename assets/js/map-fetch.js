@@ -42,7 +42,7 @@ window.addEventListener("load", () => {
             /* objects from 6 fetch from API artists */
             console.log(datas);
             const nomiArtisti = getAutorsNames(datas);
-            PushNamesIntoLists(nomiArtisti);
+            PushNamesIntoLists(nomiArtisti, datas);
         })
         .catch((err) => {
             console.log(err);
@@ -57,17 +57,18 @@ const getAutorsNames = (datas) => {
     return arrNamesArtists;
 };
 
-const PushNamesIntoLists = (nomiArtisti) => {
+const PushNamesIntoLists = (nomiArtisti, datas) => {
     console.log(nomiArtisti);
 
     for (let i = 0; i < nomiArtisti.length; i++) {
         let singleName = nomiArtisti[i];
         console.log(singleName);
         getPlaylists(singleName, "buonPomeriggio", "small");
-        getPlaylists(singleName, "ascoltatiDiRecente", "large");
-        getPlaylists(singleName, "iTuoiMix", "large");
-        getPlaylists(singleName, "tendenze", "large");
-        getPlaylists(singleName, "popolare", "large");
+        getPlaylists(nomiArtisti[(i + 1) % nomiArtisti.length], "ascoltatiDiRecente", "large");
+        getPlaylists(nomiArtisti[(i + 2) % nomiArtisti.length], "iTuoiMix", "large");
+        getPlaylists(nomiArtisti[(i + 3) % nomiArtisti.length], "tendenze", "large");
+        getPlaylists(nomiArtisti[(i + 4) % nomiArtisti.length], "popolare", "large");
+        KeepListening(datas[i]);
     }
 };
 const callApiArtists = () => {
@@ -157,7 +158,7 @@ const createCard = (obj, cardType) => {
         return card;
     } else if (cardType == "large") {
         const card = document.createElement("div");
-        card.classList.add("col-12", "col-md-6", "col-xl-4", "col-xxl-2");
+        card.classList.add("col-12", "col-md-6", "col-xl-4", "col-xxl-3");
         card.innerHTML = `
         
         <a href="./albumpage.html?idAlbum=${obj.album.id}">
@@ -186,4 +187,57 @@ const createCard = (obj, cardType) => {
   `;
         return card;
     }
+};
+
+const KeepListening = (informations) => {
+    console.log(informations);
+    let artistId = informations.id;
+    const continuaAdAscoltareDiv = document.getElementById("continuaAdAscoltare");
+    continuaAdAscoltareDiv.classList.add("gap-3");
+    continuaAdAscoltareDiv.innerHTML = `
+    <a class="d-flex justify-content-center" href="./artistpage.html?idArtist=${artistId}">
+    <div class="row d-lg-none">
+        <div class="col-12">
+
+            <div class="d-flex justify-content-center w-100"><img class="img-fluid" src=${informations.picture_big} alt="foto di ${informations.name}"></div>
+        </div>
+    </div> </a>
+    <a class="d-flex gap-4" href="./artistpage.html?idArtist=${artistId}">
+                                <div class="col-lg-3 col-md-4 mt-3 d-none d-lg-block">
+                                         <img
+                                            src="${informations.picture_big}"
+                                            class="figure-img img-fluid"
+                                            alt="A generic square placeholder image."
+                                        />
+                                    </div>
+                                    <!-----Dettagli album----->
+                                    <div class="col-lg-9 col-md-8 d-flex align-items-center">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center">
+
+                                                <p>
+                                                    <button type="button" class="btn btn-dark btn-sm rounded-pill lead">
+                                                        Nascondi annunci
+                                                    </button>
+                                                </p>
+                                            </div>
+                                            <h5 class="nome-album display-4 fw-bold text-white">${informations.name}</h5>
+
+                                            <p class="text-white">Ascolta canzoni di ${informations.name}</p>
+
+                                            <div>
+                                                <button type="button" class="btn btn-success rounded-pill text-white">
+                                                    Trova Canzoni
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    class="btn btn-outline-secondary rounded-pill text-white"
+                                                >
+                                                    save
+                                                </button>
+                                            </div>
+                                        </div>
+                                </div>
+    </a>
+    `;
 };
