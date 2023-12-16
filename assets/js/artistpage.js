@@ -274,14 +274,17 @@ const playSongIntoPlayerMp3 = (song) => {
     const playBtn = document.getElementById("play-btn");
     const pauseBtn = document.getElementById("pause-btn");
     const volume = document.getElementById("volume");
-    const playerBar = document.getElementById("playerBar");
+    const barraRiproduzione = document.getElementById("playerBar");
     const toggleAudio = document.getElementById("toggleAudio");
     const volumeIcon = document.getElementById("js-volume-icon");
 
     audioPlayer.src = song;
+    audioPlayer.play();
 
     let isPlaying = false;
     let isMute = false;
+
+    const barraRiproduzioneMuovente = () => {};
 
     toggleAudio.addEventListener("click", () => {
         volumeIcon.classList.toggle("bi-volume-mute-fill");
@@ -311,21 +314,6 @@ const playSongIntoPlayerMp3 = (song) => {
         }
     };
 
-    const updateProgressBar = () => {
-        let totalDurationSong = audioPlayer.duration;
-        let progress = audioPlayer.currentTime / totalDurationSong;
-        playerBar.value = progress * 100;
-
-        console.log("durata totale song", totalDurationSong);
-        console.log("progresso", progress);
-
-        const progressNum = document.getElementById("progressoNumber");
-        progressNum.innerHTML = Math.round(progress * 100);
-
-        const durataTotale = document.getElementById("durataTotale");
-        durataTotale.innerHTML = Math.floor(totalDurationSong);
-    };
-
     playBtn.addEventListener("click", () => {
         playSong();
     });
@@ -336,15 +324,6 @@ const playSongIntoPlayerMp3 = (song) => {
 
     volume.addEventListener("click", () => {
         setVolume();
-    });
-
-    playerBar.addEventListener("input", () => {
-        const newPosition = playerBar.value;
-        audioPlayer.currentTime = newPosition;
-    });
-
-    audioPlayer.addEventListener("timeupdate", () => {
-        updateProgressBar();
     });
 };
 
