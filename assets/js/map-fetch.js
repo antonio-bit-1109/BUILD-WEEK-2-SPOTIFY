@@ -62,6 +62,7 @@ const PushNamesIntoLists = (nomiArtisti) => {
 
     for (let i = 0; i < nomiArtisti.length; i++) {
         let singleName = nomiArtisti[i];
+        console.log(singleName);
         getPlaylists(singleName, "buonPomeriggio", "small");
         getPlaylists(singleName, "ascoltatiDiRecente", "large");
         getPlaylists(singleName, "iTuoiMix", "large");
@@ -170,10 +171,10 @@ const createCard = (obj, cardType) => {
                 <img src="./assets/imgs/play-fill.svg" class="position-absolute positionCustom" />
             </div>
             <div class="card-body fix-h-100">
-                <h6 class="card-title overflowCustom max-h-50 fs-6">
+                <h6 class="card-title overflowCustom max-h-50 fs-5">
                     <a class="customColorA" href="./albumpage.html?idAlbum=${obj.album.id}">${obj.album.title}</a>
                 </h6>
-                <p class="card-text fs-8">
+                <p class="card-text fs-6">
                     <a class="customColorA" href="./artistpage.html?idArtist=${obj.artist.id}&idAlbum=${obj.album.id}"
                         >${obj.artist.name}</a
                     >
