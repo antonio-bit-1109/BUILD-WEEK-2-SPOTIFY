@@ -124,6 +124,8 @@ function getPlaylists(value, container, cardType) {
 const generateCardList = (arrayObj, container, cardType) => {
     const cardContainer = document.getElementById(container);
     cardContainer.innerHTML = "";
+
+    // Use Math.min to get the smaller of the two values
     for (let i = 0; i < 6; i++) {
         let card = createCard(arrayObj.data[i], cardType);
         cardContainer.appendChild(card);
