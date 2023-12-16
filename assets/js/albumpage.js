@@ -9,7 +9,7 @@ console.log(" id ", id);
 
 window.addEventListener("DOMContentLoaded", () => {
     getAlbumData();
-    GradientThief();
+    /* GradientThief(); */
     //   song.pause();
 });
 
@@ -64,7 +64,6 @@ const buildPage = (result) => {
     let releaseYear = document.querySelector(".releaseYear");
     let songsNum = document.querySelector(".songsNum");
     let duration = document.querySelector(".duration");
-
     let durataAlbum = result.duration;
 
     convertiSecondiInMinuti(durataAlbum);
@@ -72,10 +71,11 @@ const buildPage = (result) => {
     // -------riempio gli spazi con il contenuto dell'aggetto Album
     //   ---foto Album
     fotoAlbum.innerHTML = `                           
-<img
-src=${result.cover_medium}
+<img id="imgToThief"
+src ="${result.cover_medium}"
 class="figure-img img-fluid"
 alt="A generic square placeholder image."
+id="imgToThief"
 />`;
 
     // --- Nome Album
@@ -89,6 +89,7 @@ alt="A generic square placeholder image."
   src=${imageSmall}
   class="rounded-circle"
   alt="A generic square placeholder image."
+  
 />`;
 
     // --- Nome Artista
@@ -102,6 +103,23 @@ alt="A generic square placeholder image."
 
     //   ---durata
     duration.innerText = convertiSecondiInMinuti(durataAlbum) + " min";
+
+    const img = document.getElementById("imgToThief");
+    /* img.src = objImg.img; */
+    img.crossOrigin = true;
+    img.addEventListener("load", () => {
+        gradientThief(img);
+    });
+};
+
+const gradientThief = (img) => {
+    const colorThief = new ColorThief();
+    const dominantColor = colorThief.getColor(img);
+    console.log(dominantColor);
+
+    // seleziono il div e aggiungo uno stile inline
+    let div = document.querySelector(".Content-area");
+    div.style.backgroundColor = `rgb(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]})`;
 };
 
 // ------CREATE PLAYLIST
@@ -173,24 +191,6 @@ const createPlaylist = (result) => {
     console.log(songIdArray);
     console.log(songSourceArray);
     console.log(songsObjArray);
-};
-
-// ---Rardom Color
-const GradientThief = () => {
-    // Genera valori RGB randomici
-    /*    var randomColor1 =
-        "rgb(" +
-        Math.floor(Math.random() * 256) +
-        "," +
-        Math.floor(Math.random() * 256) +
-        "," +
-        Math.floor(Math.random() * 256) +
-        ")";
- */
-    // seleziono il div e aggiungo uno stile inline
-    var div = document.querySelector(".Content-area");
-    div.style.background = randomColor1;
-    div.style.background = "linear-gradient(180deg, " + randomColor1 + " 0%, " + "rgba(0,0,0,1) 100%)";
 };
 
 // ---Like Button
