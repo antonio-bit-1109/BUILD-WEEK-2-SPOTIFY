@@ -58,14 +58,17 @@ const getAutorsNames = (datas) => {
 };
 
 const PushNamesIntoLists = (nomiArtisti, datas) => {
+    console.log(nomiArtisti);
+    let randomNumber = Math.floor(Math.random() * 99);
     for (let i = 0; i < nomiArtisti.length; i++) {
         let singleName = nomiArtisti[i];
-        console.log(singleName);
-        getPlaylists(singleName, "buonPomeriggio", "small");
-        getPlaylists(nomiArtisti[(i + 1) % nomiArtisti.length], "ascoltatiDiRecente", "large");
-        getPlaylists(nomiArtisti[(i + 2) % nomiArtisti.length], "iTuoiMix", "large");
-        getPlaylists(nomiArtisti[(i + 3) % nomiArtisti.length], "tendenze", "large");
-        getPlaylists(nomiArtisti[(i + 4) % nomiArtisti.length], "popolare", "large");
+
+        /*  getPlaylists(nomiArtisti[i], "buonPomeriggio", "small"); */
+        getPlaylists(singleName + randomNumber, "buonPomeriggio", "large");
+        getPlaylists(singleName + randomNumber, "ascoltatiDiRecente", "large");
+        getPlaylists(singleName + randomNumber, "iTuoiMix", "large");
+        getPlaylists(singleName + randomNumber, "popolare", "large");
+        getPlaylists(singleName + randomNumber, "tendenze", "large");
         KeepListening(datas[i]);
     }
 };
