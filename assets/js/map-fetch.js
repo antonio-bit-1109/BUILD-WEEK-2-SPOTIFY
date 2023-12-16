@@ -58,8 +58,6 @@ const getAutorsNames = (datas) => {
 };
 
 const PushNamesIntoLists = (nomiArtisti, datas) => {
-    console.log(nomiArtisti);
-
     for (let i = 0; i < nomiArtisti.length; i++) {
         let singleName = nomiArtisti[i];
         console.log(singleName);

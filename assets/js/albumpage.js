@@ -9,7 +9,7 @@ console.log(" id ", id);
 
 window.addEventListener("DOMContentLoaded", () => {
     getAlbumData();
-    generateRandomBgGradient();
+    GradientThief();
     //   song.pause();
 });
 
@@ -176,9 +176,9 @@ const createPlaylist = (result) => {
 };
 
 // ---Rardom Color
-const generateRandomBgGradient = () => {
+const GradientThief = () => {
     // Genera valori RGB randomici
-    var randomColor1 =
+    /*    var randomColor1 =
         "rgb(" +
         Math.floor(Math.random() * 256) +
         "," +
@@ -186,7 +186,7 @@ const generateRandomBgGradient = () => {
         "," +
         Math.floor(Math.random() * 256) +
         ")";
-
+ */
     // seleziono il div e aggiungo uno stile inline
     var div = document.querySelector(".Content-area");
     div.style.background = randomColor1;
