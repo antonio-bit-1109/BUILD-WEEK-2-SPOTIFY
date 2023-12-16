@@ -282,6 +282,7 @@ const playSongIntoPlayerMp3 = (song) => {
 
     // Imposta la sorgente audio
     audioPlayer.src = song;
+    audioPlayer.play();
 
     let isMute = false;
 
