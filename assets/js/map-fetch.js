@@ -48,7 +48,8 @@ window.addEventListener("load", () => {
             console.log(err);
         });
 });
-/* DEFINIZ FUNZIONI  */
+
+/* DEFINIZ FUNZIONI */
 
 const getAutorsNames = (datas) => {
     /* data è il nome che io do ad ogni elemento dentro datas */
