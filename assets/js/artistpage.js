@@ -277,53 +277,51 @@ const playSongIntoPlayerMp3 = (song) => {
     const barraRiproduzione = document.getElementById("playerBar");
     const toggleAudio = document.getElementById("toggleAudio");
     const volumeIcon = document.getElementById("js-volume-icon");
+    const durataTotale = document.getElementById("durataTotale");
+    const tempoTrascorso = document.getElementById("progressoNumber");
 
+    // Imposta la sorgente audio
     audioPlayer.src = song;
-    audioPlayer.play();
 
-    let isPlaying = false;
     let isMute = false;
 
-    const barraRiproduzioneMuovente = () => {};
+    const toggleMusic = () => {
+        isMute = !isMute;
+        audioPlayer.volume = isMute ? 0 : volume.value;
+    };
+
+    const updateProgressBar = () => {
+        const durataCanzoneTot = audioPlayer.duration;
+
+        durataTotale.innerHTML = convertiSecondiInMinuti(durataCanzoneTot);
+        tempoTrascorso.innerHTML = convertiSecondiInMinuti(audioPlayer.currentTime);
+
+        barraRiproduzione.min = 0;
+        barraRiproduzione.max = durataCanzoneTot;
+        barraRiproduzione.value = audioPlayer.currentTime;
+    };
+
+    audioPlayer.addEventListener("timeupdate", updateProgressBar);
 
     toggleAudio.addEventListener("click", () => {
         volumeIcon.classList.toggle("bi-volume-mute-fill");
-        toggleMusic(isMute);
+        toggleMusic();
     });
 
-    const playSong = () => {
-        isPlaying = true;
-        audioPlayer.play();
-    };
-
-    const pauseSong = () => {
-        isPlaying = false;
-        audioPlayer.pause();
-    };
-
-    const setVolume = () => {
-        audioPlayer.volume = volume.value;
-    };
-
-    const toggleMusic = () => {
-        isMute = !isMute; // Toggle the mute state
-        if (isMute) {
-            audioPlayer.volume = 0;
-        } else {
-            audioPlayer.volume = volume.value;
-        }
-    };
-
     playBtn.addEventListener("click", () => {
-        playSong();
+        audioPlayer.play();
     });
 
     pauseBtn.addEventListener("click", () => {
-        pauseSong();
+        audioPlayer.pause();
     });
 
-    volume.addEventListener("click", () => {
-        setVolume();
+    volume.addEventListener("input", () => {
+        audioPlayer.volume = volume.value;
+    });
+
+    barraRiproduzione.addEventListener("input", () => {
+        audioPlayer.currentTime = barraRiproduzione.value;
     });
 };
 
