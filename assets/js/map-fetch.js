@@ -64,11 +64,11 @@ const PushNamesIntoLists = (nomiArtisti, datas) => {
         let singleName = nomiArtisti[i];
 
         /*  getPlaylists(nomiArtisti[i], "buonPomeriggio", "small"); */
-        getPlaylists(singleName + randomNumber, "buonPomeriggio", "large");
-        getPlaylists(singleName + randomNumber, "ascoltatiDiRecente", "large");
-        getPlaylists(singleName + randomNumber, "iTuoiMix", "large");
-        getPlaylists(singleName + randomNumber, "popolare", "large");
-        getPlaylists(singleName + randomNumber, "tendenze", "large");
+        getPlaylists(singleName, "buonPomeriggio", "small");
+        getPlaylists(nomiArtisti[1 % nomiArtisti.length], "ascoltatiDiRecente", "large");
+        getPlaylists(nomiArtisti[2 % nomiArtisti.length], "iTuoiMix", "large");
+        getPlaylists(nomiArtisti[3 % nomiArtisti.length], "tendenze", "large");
+        getPlaylists(nomiArtisti[4 % nomiArtisti.length], "popolare", "large");
         KeepListening(datas[i]);
     }
 };
